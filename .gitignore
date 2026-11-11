@@ -1,0 +1,8 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+drive-download-*.zip
+WordPad-Files-download.zip
+WordPad-PT-PT*.zip
+dist/

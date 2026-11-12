@@ -4,10 +4,16 @@ Versão independente do WordPad para Windows com interface em **português de Po
 
 > Esta não é uma tradução oficial da Microsoft. Consulte [NOTICE.md](NOTICE.md) antes de redistribuir os ficheiros.
 
-## Utilização
+## Instalação
 
-1. Transfira o ZIP da página **Releases** e extraia-o.
-2. Mantenha esta estrutura de pastas:
+1. Transfira `WordPad-PT-PT.zip` da página [**Releases**](https://github.com/araujom/wordpad-pt-pt/releases/latest).
+2. Antes de extrair, clique no ZIP com o botão direito e escolha **Propriedades**. No separador **Geral**, se aparecer a opção **Desbloquear**, assinale-a e selecione **Aplicar** e **OK**. Esta opção pode não aparecer, o que é normal.
+3. Extraia o ZIP e copie a pasta completa `WordPad-PT-PT` para uma destas localizações:
+
+   - `C:\Users\<o-seu-nome>\WordPad-PT-PT` — não costuma exigir permissões de administrador;
+   - `C:\Program Files\WordPad-PT-PT` — localização recomendada para todos os utilizadores; requer permissões de administrador.
+
+4. Não copie apenas o executável. Mantenha esta estrutura dentro da pasta:
 
    ```text
    WordPad-PT-PT/
@@ -19,15 +25,21 @@ Versão independente do WordPad para Windows com interface em **português de Po
        └── wordpad.exe.mui
    ```
 
-3. Abra `wordpad.exe` num Windows configurado para português (Portugal).
+5. Abra `wordpad.exe` num Windows configurado para **Português (Portugal)**.
 
-Pode utilizar a pasta em qualquer localização. Em alternativa, copie todo o conteúdo para:
+Pode guardar a pasta noutro local, se preferir. Não substitua uma instalação existente do WordPad em `C:\Program Files\Windows NT\Accessories` e não mova os ficheiros `.mui` para fora das respetivas pastas de idioma.
 
-```text
-C:\Program Files\Windows NT\Accessories
-```
+### Segurança e avisos do Windows
 
-Essa segunda opção normalmente requer permissões de administrador. Não mova os ficheiros `.mui` para fora das respetivas pastas de idioma.
+A opção **Desbloquear** não certifica que uma aplicação é de confiança: apenas remove a marca que o Windows coloca nos ficheiros transferidos da Internet. Utilize-a somente depois de confirmar que o ZIP veio deste repositório. A [Microsoft explica este comportamento](https://support.microsoft.com/windows/security/information-about-the-attachment-manager-in-microsoft-windows) na documentação do Gestor de Anexos.
+
+Antes da primeira utilização:
+
+1. Abra a pasta extraída, clique em `wordpad.exe` com o botão direito e escolha **Analisar com o Microsoft Defender** (ou com o antivírus instalado).
+2. Para confirmar a integridade dos ficheiros, compare os respetivos valores SHA-256 com [`SHA256SUMS.txt`](SHA256SUMS.txt). Um hash coincidente confirma que o ficheiro não foi alterado; por si só, não prova que seja seguro.
+3. Se o Microsoft Defender SmartScreen apresentar **O Windows protegeu o PC**, confirme novamente a origem e o resultado da análise. Apenas se confiar no ficheiro, selecione **Mais informações** e **Executar mesmo assim**. Não é necessário desativar o Defender nem o SmartScreen.
+
+O `wordpad.exe` incluído não foi modificado por este projeto, mas a cópia de origem não contém uma assinatura digital incorporada. O recurso `pt-PT/wordpad.exe.mui` é uma tradução comunitária criada neste repositório e também não é assinado pela Microsoft. Por esse motivo, um aviso do SmartScreen pode ser esperado.
 
 ## Conteúdo da tradução
 
